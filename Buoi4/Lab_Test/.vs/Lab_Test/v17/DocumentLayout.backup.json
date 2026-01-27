@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\Buoi4\\Lab_Test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3436007A-9309-4751-97CF-B4BFC470C697}|Lab_Test\\Lab_Test.csproj|D:\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\Buoi4\\Lab_Test\\lab_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3436007A-9309-4751-97CF-B4BFC470C697}|Lab_Test\\Lab_Test.csproj|solutionrelative:lab_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3436007A-9309-4751-97CF-B4BFC470C697}|Lab_Test\\Lab_Test.csproj|d:\\ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\buoi4\\lab_test\\lab_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3436007A-9309-4751-97CF-B4BFC470C697}|Lab_Test\\Lab_Test.csproj|solutionrelative:lab_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 323,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\Buoi4\\Lab_Test\\Lab_Test\\Form1.cs",
+              "RelativeDocumentMoniker": "Lab_Test\\Form1.cs",
+              "ToolTip": "D:\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\Buoi4\\Lab_Test\\Lab_Test\\Form1.cs",
+              "RelativeToolTip": "Lab_Test\\Form1.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T07:22:35.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\Buoi4\\Lab_Test\\Lab_Test\\Form1.cs",
+              "RelativeDocumentMoniker": "Lab_Test\\Form1.cs",
+              "ToolTip": "D:\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\Buoi4\\Lab_Test\\Lab_Test\\Form1.cs [Design]",
+              "RelativeToolTip": "Lab_Test\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T07:21:51.515Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
