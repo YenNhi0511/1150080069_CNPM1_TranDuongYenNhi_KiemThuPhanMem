@@ -1,0 +1,32 @@
+# Compiled class files
+target/
+*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Maven
+*.jar
+*.war
+!.mvn/wrapper/maven-wrapper.jar
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test output
+screenshots/
+test-output/
+allure-results/
+allure-report/
+
+# Environment files (KHONG commit secrets!)
+.env
+
+# Logs
+*.log

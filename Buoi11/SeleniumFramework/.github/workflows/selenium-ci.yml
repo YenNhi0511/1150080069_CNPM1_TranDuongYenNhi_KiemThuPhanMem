@@ -1,0 +1,78 @@
+# Lab 11 - GitHub Actions CI/CD + Selenium Grid
+# Bai 1 & 2: Basic pipeline + Matrix Strategy cho Chrome va Firefox
+
+name: Selenium CI Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Chay nightly test luc 2h sang (UTC)
+    - cron: '0 19 * * *'
+  workflow_dispatch:
+    # Cho phep chay thu cong tu GitHub UI
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    # Bai 2: Matrix strategy - chay song song Chrome va Firefox
+    strategy:
+      matrix:
+        browser: [chrome, firefox]
+      fail-fast: false
+
+    # Bai 3: Su dung GitHub Secrets cho credentials
+    env:
+      SAUCEDEMO_USERNAME: ${{ secrets.SAUCEDEMO_USERNAME }}
+      SAUCEDEMO_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD }}
+      CI: true
+
+    steps:
+      # Buoc 1: Checkout source code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Buoc 2: Cai dat Java 17
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      # Buoc 3: Cache Maven dependencies (tang toc)
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-maven-
+
+      # Buoc 4: Sinh file Excel test data
+      - name: Generate test data
+        run: mvn compile exec:java -Dexec.mainClass="tests.TestDataGenerator" -Dexec.classpathScope=test
+
+      # Buoc 5: Chay test voi browser tu matrix
+      - name: Run tests (${{ matrix.browser }})
+        run: mvn clean test -Dbrowser=${{ matrix.browser }} -Denv=dev
+
+      # Buoc 6: Upload test results
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-${{ matrix.browser }}
+          path: |
+            target/surefire-reports/
+            screenshots/
+            target/allure-results/
+
+      # Buoc 7: Upload Allure results
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-results-${{ matrix.browser }}
+          path: target/allure-results/
